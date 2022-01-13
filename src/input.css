@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic';
+    src: url('../src/fonts/AvantGarde-Bold.woff2') format('woff2'),
+        url('../src/fonts/AvantGarde-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic';
+    src: url('../src/fonts/AvantGarde-Medium.woff2') format('woff2'),
+        url('../src/fonts/AvantGarde-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.font-avant {
+    font-family: 'ITC Avant Garde Gothic';
+}
