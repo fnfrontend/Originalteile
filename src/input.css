@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+
 
 @font-face {
     font-family: 'ITC Avant Garde Gothic';
@@ -20,8 +20,66 @@
     font-display: swap;
 }
 
-
-
-.font-avant {
-    font-family: 'ITC Avant Garde Gothic';
+.dropdown-menu {
+    @apply relative;
 }
+.dropdown-menu:hover .dropdown{
+    @apply block;
+}
+
+.bars {@apply relative;}
+.bars:after {@apply absolute block bg-primary;
+    content:"";
+    left:98%;
+    bottom:0;
+    width:30px;
+    height:29.5px;
+    transform:skew(-0.05turn, 0deg);
+    -webkit-transform:skew(-0.05turn, 0deg);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    @apply text-2xl font-bold text-black;
+}
+
+
+.search-fields {@apply pl-14 pr-4 py-4 w-full shadow-2 border outline-none border-secondary-6 focus:border-blue-600 bg-no-repeat; height:50px; background-position: left 15px center;}
+.search-checkbox {@apply mb-1 md:mb-2;}
+.search-checkbox span {@apply ml-1.5 py-2 h-10 inline-block bg-auto;}
+.search-checkbox input {@apply absolute hidden;}
+.search-checkbox i {@apply inline-block h-5 w-5;vertical-align: middle;padding-right: 5px;background-image: url("../src/images/checkbox.png"); } 
+.search-checkbox input:checked + i {background-position: 0 -20px;}
+
+#toggle-header:before {content:'';@apply inline-block w-10 bg-no-repeat h-5 bg-auto;background-position: 0px 50%;vertical-align: middle; background-image:url(../src/images/werkstatt-icon.png)}
+
+
+.checkbox-small {@apply text-secondary-1 mt-2.5 mb-1.5; font-size:13px;}
+.checkbox-small label {@apply flex items-center;}
+.checkbox-small label span {@apply ml-1 inline-block bg-auto text-ellipsis overflow-hidden whitespace-nowrap w-4/5;}
+.checkbox-small label input {@apply absolute hidden;}
+.checkbox-small label i {@apply inline-block;height:15px; width:15px; vertical-align: middle;padding-right: 5px;background-image: url("../src/images/checkbox-small.png"); } 
+.checkbox-small label input:checked + i {background-position: 0 -15px;}
+
+.dropdown-arrow .toggle {@apply bg-no-repeat; background-image:url(../src/images/icon-arrow.svg); background-size:16px; background-position:right 5px center;}
+
+#toggleHeaderWerkstet:before {@apply h-9 w-8 inline-flex bg-no-repeat bg-left mr-1; content:''; background-image: url(../src/images/werkstatt-icon.png);}
+#toggleHeaderKfz:before {@apply h-9 w-8 inline-flex bg-no-repeat bg-left mr-1; content:''; background-image: url(../src/images/kfz-teile-icon.png);}
+
+
+/* Accordian */
+
+.accordion-heading {@apply text-sm text-secondary-5 mb-2; }
+.accordion {@apply border-t border-secondary-6;}
+.accordion-trigger {@apply appearance-none pt-2 pb-4 outline-none text-sm cursor-pointer border-0 border-b border-secondary-6 w-full text-left m-0 relative font-bold;transition: 0.3s ease;}
+.accordion-trigger::after {content: "";position: absolute;right: 0;top: calc(50% - 5px);width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-top: 8px solid #aaa;transform: rotate(0deg);transform-origin: center;transition: transform 0.5s;}
+.accordion-trigger[aria-expanded="true"]::after {transform: rotate(180deg);}
+.accordion-copy {@apply overflow-hidden text-sm text-secondary-5 max-h-0; visibility: hidden;transition: visibility 0.5s, padding 0.5s, max-height 0.5s;}
+.accordion-copy--open {@apply border-0 border-b border-secondary-6 mb-2; visibility: visible;}
+.accordion-copy__pic {@apply h-auto float-right mb-5; width: 100px;}
+
+@media (min-width: 540px) {
+    .container-head {font-size: 2rem;}
+    .accordion-copy__pic {width: 180px;}
+}
+
+@tailwind utilities;
