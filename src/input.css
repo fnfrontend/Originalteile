@@ -20,6 +20,10 @@
     font-display: swap;
 }
 
+body {
+    @apply font-body;
+}
+
 .dropdown-menu {
     @apply relative;
 }
@@ -75,11 +79,27 @@
 .accordion-trigger[aria-expanded="true"]::after {transform: rotate(180deg);}
 .accordion-copy {@apply overflow-hidden text-sm text-secondary-5 max-h-0; visibility: hidden;transition: visibility 0.5s, padding 0.5s, max-height 0.5s;}
 .accordion-copy--open {@apply border-0 border-b border-secondary-6 mb-2; visibility: visible;}
-.accordion-copy__pic {@apply h-auto float-right mb-5; width: 100px;}
 
 @media (min-width: 540px) {
     .container-head {font-size: 2rem;}
-    .accordion-copy__pic {width: 180px;}
 }
+
+
+.icon-address:before {content:''; background:url(../src/images/icon-location.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+.icon-telephone:before {content:''; background:url(../src/images/icon-phone.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+.icon-email:before {content:''; background:url(../src/images/icon-email.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+.icon-web:before {content:''; background:url(../src/images/icon-web.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+.icon-fax:before {content:''; background:url(../src/images/icon-fax.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+.icon-partner:before {content:''; background:url(../src/images/icon-partner.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+.icon-facebook:before {content:''; background:url(../src/images/icon-facebook.svg); @apply block absolute bg-no-repeat bg-center opacity-70 w-3 h-3 left-0; top:3px;}
+
+
+/* Tooltip */
+.tooltip {@apply relative;}
+.tooltip:hover:after{@apply absolute bottom-[115%] flex justify-center rounded-md leading-tight text-secondary-2 text-[13px] p-2 w-44 shadow-1 text-left bg-secondary-6;content: attr(title);margin: -82px auto 0;}
+.tooltip:hover:before{@apply absolute bottom-[102%];border: solid;border-color: #bbb transparent;border-width: 6px 4px 0 4px;content: "";left: 45%;}
+
+
+.flex-0-auto {flex: 0 0 auto;}
 
 @tailwind utilities;
