@@ -1,6 +1,7 @@
 {
-  "devDependencies": {
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^3.0.13"
+  "name": "originalteile",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   }
 }

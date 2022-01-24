@@ -1,39 +1,84 @@
 module.exports = {
-  plugins: [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
+  content: [
+    './*.{html,js}',
+    './src/**/*.{html,js}',
   ],
   theme: {
-    fontFamily: {
-      display: ['Inter', 'system-ui', 'sans-serif'],
-      body: ['Inter', 'system-ui', 'sans-serif'],
+    screens: {
+      'xs': '475px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1280px',
+      '2xl': '1536px'
     },
-    colors: {
-      primary: {
-        50: '#eff6ff',
-        100: '#dbeafe',
-        200: '#bfdbfe',
-        300: '#93c5fd',
-        400: '#60a5fa',
-        500: '#3b82f6',
-        600: '#2563eb',
-        700: '#1d4ed8',
-        800: '#1e40af',
-        900: '#1e3a8a',
+    extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '0.65rem',
+          sm: '0.75rem',
+          lg: '1rem',
+          xl: '1rem'
+        },
+        width: '1100px'
       },
-      secondary: {
-        50: '#f9fafb',
-        100: '#f3f4f6',
-        200: '#e5e7eb',
-        300: '#d1d5db',
-        400: '#9ca3af',
-        500: '#6b7280',
-        600: '#4b5563',
-        700: '#374151',
-        800: '#1f2937',
-        900: '#111827',
+      fontFamily: {
+        display: ['ITC Avant Garde Gothic', 'sans-serif'],
+        body: ['Arial', 'sans-serif'],
+        condensed: ['AvantGarde LT Cond', 'sans-serif']
       },
-    },
+      colors: {
+        lite: "rgba(255, 255, 255, 0.95)",
+        primary: "#e30613",
+        turbolader: "#be9b00",
+        antrieb: "#e36302",
+        autoglas: "#B8C0D5",
+        klima: "#007eb0",
+        autofit: "#fbc707",
+        autodienst: "#322A75",
+        secondary: {
+          "1": "#5d686e",
+          "2": "#292d30",
+          "3": "#222222",
+          "4": "#7d7d7d",
+          "5": "#697075",
+          "6": "#c9c9c9",
+          "7": "#d4d4d4",
+          "8": "#535e63"
+        }
+      },
+      boxShadow: {
+        '1': 'rgba(0,0,0,0.21) 1px 1px 1px 0px',
+        '2': 'rgb(0,0,0,0.20) 1px 1px 3px 0px inset'
+      }
+    }
   },
+  variants: {
+    extend: {
+      // ...
+     inset: ['hover', 'focus'],
+    }
+  },
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          '@screen sm': {
+            maxWidth: '780px',
+          },
+          '@screen md': {
+            maxWidth: '780px',
+          },
+          '@screen lg': {
+            maxWidth: '972px',
+          },
+          '@screen xl': {
+            maxWidth: '1132px',
+          },
+        }
+      })
+    }
+  ],
 }

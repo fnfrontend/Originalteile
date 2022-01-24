@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adautodienst</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link href="src/multiselect.css" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-cover bg-top bg-no-repeat bg-fixed overflow-x-hidden" style="background-image:url(src/images/autofit-bg.jpg);">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container py-3 flex flex-wrap lg:flex-nowrap items-center justify-between">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./src/images/autodienst.png" alt="Auto Dienst" class="w-auto max-h-[60px]">
+                </a>
+            </div>
+
+            <div class="flex md:hidden">
+                <a href="javascript:void(0);" id="searchMenu" class="flex bg-autodienst text-white h-8 w-8 mr-2 justify-center items-center" style="display:none;">
+                    <svg class="w-4" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/></svg>
+                </a>
+
+                <a href="Javascript:void(0)" id="toggleMenu" class="bg-autodienst text-white h-8 px-2 flex items-center justify-center">
+                    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
+                </a>
+            </div>
+
+            <a href="javascript:void(0);" id="searchBtn" class="flex lg:hidden bg-autodienst text-white text-sm px-1.5 sm:px-2.5 py-1 mt-6 mb-2 md:my-0 w-full md:w-auto justify-center">
+                <svg class="w-4 mr-1.5" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/></svg>
+                <span class="md:inline-block">Kfz-Werkstätten &amp; Teilehändler suchen</span>
+            </a>
+
+            <nav id="navbar" class="w-full absolute md:relative top-[4.75rem] md:top-0 left-0 z-50 bg-white md:bg-transparent lg:w-auto mt-3 lg:mt-0 hidden md:inline-block">
+                <ul class="flex flex-col md:flex-row items-center md:justify-center lg:justify-end font-display -mx-4 md:-ml-0 md:-mr-3 border-t border-black md:border-0">
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="freie-werkstatt.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autodienst tracking-tighter block">Mobilitätsgarantie</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="index.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autodienst tracking-tighter block">Originalteile</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="news.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autodienst tracking-tighter block">News</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autodienst tracking-tighter block">Suche</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb h-5 mt-5"></div>
+
+    <!-- Main Body -->
+    <main class="mt-1.5">
+        <div class="container">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full lg:w-7/12 xl:w-[690px] xl:flex-none">
+
+                    <div class="max-w-full lg:max-w-[520px] xl:max-w-[630px] mb-5">
+                        <div class="title-bar-top autodienst"></div>
+                        <div class="bg-lite rounded-r-xl shadow-1 relative z-10 md:p-5 p-3.5">
+                            <h1 class="font-display font-bold tracking-tight text-lg leading-tight md:text-[30px] lg:text-[22px]">AD AUTO DIENST DIE WERKSTATT IHRES VERTRAUENS ÜBER 130X IN ÖSTERREICH</h1>
+                        </div>
+                        <div class="title-bar-bottom autodienst"></div>
+                    </div>
+
+                    <div class="max-w-full lg:max-w-[520px] xl:max-w-[630px] bg-lite rounded-xl shadow-1 p-5 font-body">
+                        <h3 class="font-body leading-tight text-lg font-bold mb-4">Bei ad AUTO DIENST finden Sie eine zuverlässige Kfz-Werkstatt für Ihren Neuwagen und Gebrauchtwagen.</h3>
+
+                        <p class="mb-5 font-body text-secondary-5 text-sm">Bei ad AUTO DIENST finden Sie die Werkstatt Ihres Vertrauens in Ihrer Umgebung. In den Kfz-Meisterbetrieben werden Service, Wartung und Reparatur an allen Automarken und Fahrzeugmodellen von erfahrenen Mechanikern mit <a href="index.html" title="Opens internal link in current window" target="_blank" class="internal-link">Original-Ersatzteilen</a> durchgeführt. Damit bleibt auch bei Ihrem <a href="freie-werkstatt.html" title="Opens internal link in new window" target="_blank" class="internal-link-new-window">Neuwagen der Gewährleistungsanspruch erhalten</a>. Außerdem erhalten Sie bei den ad AUTO DIENST Werkstätten eine zweijährige Garantie auf Teile und Reparaturen.</p>
+                        <p class="mb-5 font-body text-secondary-5 text-sm">Eine ad AUTO DIENST Werkstatt in Ihrer Umgebung finden Sie mit einem Klick. Wenn Sie die Postleitzahl oder den Ort eingeben, werden Ihnen Kfz-Meisterbetriebe in Ihrer Umgebung angezeigt. Suchen Sie eine bestimmte Kfz-Reparatur oder Service-Leistung? Dann wählen Sie aus dem umfangreichen Angebot an Werkstattleistungen wie etwa Bremsscheiben, Pickerl, Reifen umstecken, Kupplung, Reifendruck-Kontrollsystem oder Einspritzanlage aus.</p>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="w-full lg:w-5/12 xl:w-[410px] mt-5 lg:mt-0">
+                    <div class="flex flex-wrap -mx-2.5 lg:mx-0 lg:mt-[30px]">
+
+                        <!-- Sidebar News Block -->
+                        <div class="w-full md:w-1/2 lg:w-full px-2.5 lg:px-0">
+                            <div class="bg-lite rounded-xl shadow-1 p-4 mb-5">
+                                <h5 class="text-xs md:text-sm font-display font-semibold text-secondary-4">News</h5>
+                                <h4><a href="#" class="text-sm md:text-base font-condensed text-autodienst uppercase">Es ist Zeit für Frostschutz</a></h4>
+
+                                <ul class="news-items">
+                                    <!-- News Item -->
+                                    <li class="item active">
+                                        <div class="mr-2 md:mr-4 flex-none max-w-[40%] md:max-w-max">
+                                            <a href="#"><img src="src/images/news.jpg" width="166" height="126" alt=""></a>
+                                        </div>
+
+                                        <div class="left">
+                                            <p class="text-xs md:text-sm text-secondary-1">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen...</p>
+
+                                            <a href="#" class="text-autodienst font-bold hover:underline">weiterlesen</a>
+                                        </div>
+                                    </li>
+
+                                    <!-- News Item -->
+                                    <li class="item">
+                                        <div class="mr-2 md:mr-4 flex-none max-w-[40%] md:max-w-max">
+                                            <a href="#"><img src="src/images/news1.jpg" width="166" height="126" alt=""></a>
+                                        </div>
+
+                                        <div class="left">
+                                            <p class="text-xs md:text-sm text-secondary-1">Wie bemerkt man, dass eine Spule nicht mehr arbeitet? Wenn das Auto noch über das alte System verfügt, bei dem eine zentrale...</p>
+
+                                            <a href="#" class="text-autodienst font-bold hover:underline">weiterlesen</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Search -->
+                        <div class="w-full md:w-1/2 lg:w-full px-2.5 lg:px-0">
+                            <div class="bg-lite rounded-xl autodienst-search shadow-1 p-5 mb-5">
+                                
+                                <h2 class="font-display font-bold text-white bg-autodienst leading-none text-lg md:text-[22px]  -mx-5 py-1 px-5">ad AUTO DIENST</h2>
+                                <h3 class="text-autodienst font-bold text-lg md:text-[22px] mb-9">Werkstätten suchen</h3>
+
+                                <div class="mb-2">
+                                    <input type="text" class="search-fields" style="background-image:url('src/images/location-icon.png')" placeholder="Ort oder PLZ eingeben">
+                                </div>
+
+                                <div class="mb-2">
+                                    <input type="text" class="search-fields" style="background-image:url('src/images/firmenname-icon.png')" placeholder="Firmenname">
+                                </div>
+
+
+                                <div class="flex justify-between mt-4">
+                                    <a href="javascript:;" class="text-autodienst underline font-normal text-xs md:text-sm">Suche verfeinern</a>
+
+                                    <div>
+                                        <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-autodienst text-white text-xs px-8 py-1.5">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="bg-lite my-5">
+        <div class="max-w-lg lg:max-w-6xl mx-auto relative px-4">
+
+            <!-- Swiper -->
+            <div class="swiper logo-slider mx-10 lg:mx-12 py-3.5 lg:py-4">
+                <div class="swiper-wrapper items-center">
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/AMC-Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von AMC Filter" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Banner_neu.png" width="100" height="80" alt="Dieses Bild zeigt das Logo von Banner Batterien" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Bosch-logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Bosch" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/brembo-logo.png" width="120" height="100" alt="Dieses bild zeigt das Logo von Brembo Bremsen" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Castrol-Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Castrol" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/DRI_Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von DRI Automotive" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/gates-logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Gates" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/graf_logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Graf" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Liqui-Moly-Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Liqui Moly" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/MANN_Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Mann Filter" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/MEYLE_Logo.jpg" width="100" height="35" alt="" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Monroe.png" width="100" height="80" alt="Dieses Bild zeigt das Logo von Monroe" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/ngk-ntk.png" width="100" height="80" alt="Dieses Bild zeigt das Logo von NGK" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Nissens-Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Nissens" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/PHILIPS_Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Philips" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Sachs_Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Sachs" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Saint-Gobain-Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Saint Gobain" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/SKF_logo.png" width="120" height="34" alt="" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/sonax-logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Sonax" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/SPIDAN_Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Spidan" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/thule-logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Thule" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/TRW-Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von TRW" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/valeo-logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Valeo" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/VDO_logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von VDO" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Viktor-Reinz-Logo.png" width="120" height="100" alt="Dieses Bild zeigt dasLogo von Viktor Reinz" /></div>
+                    <div class="swiper-slide"> <img class="logoimage" src="src/images/logos/Walker_Logo.png" width="120" height="100" alt="Dieses Bild zeigt das Logo von Walker" /></div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </div>
+
+    
+    <!-- Footer -->
+
+    <footer class="bg-secondary-2 py-4">
+        <div class="max-w-6xl px-4 mx-auto flex md:items-center justify-between text-secondary-4">
+            
+            <div class="w-1/2 md:w-auto text-xs">© ORIGINALTEILE</div>
+        
+            <div class="w-1/2 md:w-auto">
+                <ul class="flex flex-wrap -mx-2">
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="kontakt.html" class="px-1 border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Kontakt</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Sitemap</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Impressum</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Rechtliche Hinweise</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Datenschutz &amp; Cookies</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Disclaimer</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="partner.html" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Partner Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./src/js/multiselect.js"></script>
+    <script src="./src/js/script.js"></script>
+    <script src="src/js/fslightbox.js"></script>
+
+
+</body>
+</html>

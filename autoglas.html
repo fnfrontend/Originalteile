@@ -8,7 +8,7 @@
   <link href="src/multiselect.css" rel="stylesheet">
   <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-cover bg-top bg-no-repeat bg-fixed overflow-x-hidden" style="background-image:url(src/images/hintergrund-originalteile.jpg);">
+<body class="bg-cover bg-top bg-no-repeat bg-fixed overflow-x-hidden" style="background-image:url(src/images/autoglas.jpg);">
 
     <!-- Header -->
     <header class="bg-white shadow-sm">
@@ -20,39 +20,39 @@
             </div>
 
             <div class="flex md:hidden">
-                <a href="javascript:void(0);" id="searchMenu" class="flex bg-primary text-white h-8 w-8 mr-2 justify-center items-center" style="display:none;">
+                <a href="javascript:void(0);" id="searchMenu" class="flex bg-autoglas text-white h-8 w-8 mr-2 justify-center items-center" style="display:none;">
                     <svg class="w-4" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/></svg>
                 </a>
 
-                <a href="Javascript:void(0)" id="toggleMenu" class="bg-primary text-white h-8 w-8 px-2 flex items-center justify-center">
+                <a href="Javascript:void(0)" id="toggleMenu" class="bg-autoglas text-white h-8 w-8 px-2 flex items-center justify-center">
                     <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 icon-bars"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
                     <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-3.5 icon-close hidden"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>
                 </a>
             </div>
 
-            <a href="javascript:void(0);" id="searchBtn" class="flex lg:hidden bg-primary text-white text-sm px-1.5 sm:px-2.5 py-1 mt-6 mb-2 md:my-0 w-full md:w-auto justify-center">
+            <a href="javascript:void(0);" id="searchBtn" class="flex lg:hidden bg-autoglas text-white text-sm px-1.5 sm:px-2.5 py-1 mt-6 mb-2 md:my-0 w-full md:w-auto justify-center">
                 <svg class="w-4 mr-1.5" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/></svg>
                 <span class="md:inline-block">Kfz-Werkstätten &amp; Teilehändler suchen</span>
             </a>
 
             <nav id="navbar" class="w-full absolute md:relative top-[4.75rem] md:top-0 left-0 z-50 bg-white md:bg-transparent lg:w-auto mt-3 lg:mt-0 hidden md:inline-block">
                 <ul class="flex flex-col md:flex-row items-center md:justify-center lg:justify-end font-display -mx-4 md:-ml-0 md:-mr-3 border-t border-black md:border-0">
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="uber-originalteile.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Über Originalteile</a></li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="freie-werkstatt.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Freie Werkstatt</a></li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="news.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">News</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="uber-originalteile.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autoglas tracking-tighter block">Über Originalteile</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="freie-werkstatt.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autoglas tracking-tighter block">Freie Werkstatt</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="news.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autoglas tracking-tighter block">News</a></li>
                     <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0 dropdown-menu">
-                        <a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Spezialisierungen</a>
+                        <a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autoglas tracking-tighter block">Spezialisierungen</a>
 
                         <div class="dropdown md:hidden md:absolute md:shadow-1 bg-lite w-full top-12 mt-3.5 -mb-3.5 md:my-0">
                             <ul class="-mx-4 md:mx-0">
-                                <li class="border-t border-black md:border-0"><a href="antriebs.html" class="text-sm uppercase font-bold text-[#e36302] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Antrieb</a></li>
-                                <li class="border-t border-black md:border-0"><a href="autoglas.html" class="text-sm font-bold text-[#B8C0D5] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Autoglas</a></li>
-                                <li class="border-t border-black md:border-0"><a href="klima.html" class="text-sm uppercase font-bold text-[#007eb0] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Klima</a></li>
-                                <li class="border-t border-black md:border-0"><a href="turbolader.html" class="text-sm uppercase font-bold text-[#be9b00] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Turbolader</a></li>
+                                <li class="border-t border-black md:border-0"><a href="antriebs.html" class="text-sm uppercase font-bold text-[#e36302] hover:text-autoglas font-display text-center px-5 py-3.5 md:py-2.5 block">Antrieb</a></li>
+                                <li class="border-t border-black md:border-0"><a href="autoglas.html" class="text-sm font-bold text-[#B8C0D5] hover:text-autoglas font-display text-center px-5 py-3.5 md:py-2.5 block">Autoglas</a></li>
+                                <li class="border-t border-black md:border-0"><a href="klima.html" class="text-sm uppercase font-bold text-[#007eb0] hover:text-autoglas font-display text-center px-5 py-3.5 md:py-2.5 block">Klima</a></li>
+                                <li class="border-t border-black md:border-0"><a href="turbolader.html" class="text-sm uppercase font-bold text-[#be9b00] hover:text-autoglas font-display text-center px-5 py-3.5 md:py-2.5 block">Turbolader</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Suche</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autoglas tracking-tighter block">Suche</a></li>
                 </ul>
             </nav>
         </div>
@@ -60,7 +60,7 @@
 
     <div class="mobile-search-box hidden bg-white shadow-1 py-5 px-3 mb-5">
         <div class="text-right">
-            <a href="Javascript:void(0)" id="hideSearch" class="bg-primary text-white h-7 w-7 px-2 inline-flex items-center justify-center opened">
+            <a href="Javascript:void(0)" id="hideSearch" class="bg-autoglas text-white h-7 w-7 px-2 inline-flex items-center justify-center opened">
                 <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-3 icon-close"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>
             </a>
         </div>
@@ -238,19 +238,13 @@
 
         <div class="flex  justify-end mt-4">
             <div>
-                <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-primary text-white text-xs px-8 py-1.5">
+                <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-autoglas text-white text-xs px-8 py-1.5">
             </div>
         </div>
 
-    </div>
+    </div>    
     <!-- Breadcrumb -->
-    <div class="container breadcrumb h-5 mt-[50px]">
-        <ul class="text-white text-xs flex">
-            <li><a class="breadcrumblink" href="index.html">Home</a></li>
-            <li class="delimeter px-1">&gt;</li>
-            <li><span>News</span></li>
-        </ul>
-    </div>
+    <div class="container breadcrumb h-5 mt-5"></div>
 
     <!-- Main Body -->
     <main class="mt-1.5">
@@ -259,65 +253,31 @@
                 <div class="w-full lg:w-7/12 xl:w-[690px] xl:flex-none">
 
                     <div class="max-w-full lg:max-w-[520px] xl:max-w-[630px] mb-5">
-                        <div class="title-bar-top"></div>
-                        <div class="bg-lite shadow-1 p-3.5 md:p-5 relative z-10">
-                            <h1 class="font-display font-bold tracking-tight text-lg leading-tight md:text-[30px] lg:text-[22px]">NEWS</h1>
+                        <div class="title-bar-top autoglas"></div>
+                        <div class="bg-lite shadow-1 relative z-10">
+                            <div class="flex">
+                                <div class="w-2/12 py-2.5 pl-2.5">
+                                    <img src="./src/images/autoglas.png" alt="Autoglas" class="max-h-20">
+                                </div>
+                                <div class="w-10/12 md:p-5 p-3.5">
+                                    <h1 class="font-display font-bold tracking-tight text-lg leading-tight md:text-[30px] lg:text-[22px]">SPEZIALIST FÜR AUTOGLAS FINDEN</h1>
+                                </div>
+                            </div>
                         </div>
-                        <div class="title-bar-bottom"></div>
+                        <div class="title-bar-bottom autoglas"></div>
                     </div>
 
+                    <ul class="flex flex-wrap justify-start mb-5">
+                        <li class="mt-2.5 mr-2.5"><a href="#" class="text-white font-bold bg-secondary-5 inline-block px-6 py-2"> Über uns </a></li>
+                        <li class="mt-2.5 mr-2.5"><a href="#" class="text-white font-bold bg-secondary-5 inline-block px-6 py-2"> FAQs </a></li>
+                        <li class="mt-2.5 mr-2.5"><a href="news.html" class="text-white font-bold bg-secondary-5 inline-block px-6 py-2"> News </a></li>
+                    </ul>
+
                     <div class="max-w-full lg:max-w-[520px] xl:max-w-[630px] bg-lite shadow-1 p-5 font-body">
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>  
+                        <h3 class="font-body leading-tight text-lg font-bold mb-4">Die Autoverglasung ist ein wichtiger Bestandteil von modernen Fahrzeugen. Im Falle einer Beschädigung sollten Sie die Reparatur oder den Austausch von einem Spezialisten für Autoglas durchführen lassen.</h3>
 
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>  
-
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>  
-
-                        <ul class="pagination">
-                            <li class="current"><span>1</span></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">›</a></li>
-                            <li><a href="#">»</a></li>
-                        </ul>
+                        <p class="mb-5 font-body text-secondary-5 text-sm">Der Wunsch nach mehr Sicherheit und Komfort beim Autofahren erfordert eine permanente Weiterentwicklung durch die Hersteller. Pioniere wie Saint-Gobain haben der Windschutzscheibe Dank kontinuierlicher Innovationen eine Reihe weiterer Funktionen verschafft. Doch trotz der hohen Qualität ist die Windschutzscheibe gegen eine Beschädigung wie zum Beispiel durch einen Steinschlag nicht immun. Aber was ist zu tun, wenn es Ihre Windschutzscheibe erwischt hat?</p>
+                        <p class="mb-5 font-body text-secondary-5 text-sm">Erste Hilfe bei Beschädigung leisten Sie durch ein Überkleben mit durchsichtigem Klebeband, damit Feuchtigkeit und Schmutz nicht eindringen können. Der nächste Weg sollte Sie allerdings in eine Fachwerkstätte führen, die das Ausmaß des Schadens feststellt. Oft muss die Scheibe gar nicht ausgetauscht werden: Ist der Sprung kleiner als eine zwei Euro Münze und nicht im Fernsichtfeld der Scheibe, ist eine Reparatur in der Regel machbar. Den nächsten Spezialisten für Autoglas in Ihrer Nähe finden Sie in wenigen Klicks mit unserer Werkstätten-Suche!</p>
                     </div>
                 </div>
 
@@ -329,7 +289,7 @@
                         <div class="w-full md:w-1/2 lg:w-full px-2.5 lg:px-0">
                             <div class="bg-lite shadow-1 p-4 mb-5">
                                 <h5 class="text-xs md:text-sm font-display font-semibold text-secondary-4">News</h5>
-                                <h4><a href="#" class="text-sm md:text-base font-condensed text-primary uppercase">Es ist Zeit für Frostschutz</a></h4>
+                                <h4><a href="#" class="text-sm md:text-base font-condensed text-autoglas uppercase">Es ist Zeit für Frostschutz</a></h4>
 
                                 <ul class="news-items">
                                     <!-- News Item -->
@@ -341,7 +301,7 @@
                                         <div class="left">
                                             <p class="text-xs md:text-sm text-secondary-1">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen...</p>
 
-                                            <a href="#" class="text-primary font-bold hover:underline">weiterlesen</a>
+                                            <a href="#" class="text-autoglas font-bold hover:underline">weiterlesen</a>
                                         </div>
                                     </li>
 
@@ -354,7 +314,7 @@
                                         <div class="left">
                                             <p class="text-xs md:text-sm text-secondary-1">Wie bemerkt man, dass eine Spule nicht mehr arbeitet? Wenn das Auto noch über das alte System verfügt, bei dem eine zentrale...</p>
 
-                                            <a href="#" class="text-primary font-bold hover:underline">weiterlesen</a>
+                                            <a href="#" class="text-autoglas font-bold hover:underline">weiterlesen</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -538,10 +498,10 @@
                                 </div>
 
                                 <div class="flex justify-between mt-4">
-                                    <a href="javascript:;" class="text-primary underline font-normal text-xs md:text-sm">Suche verfeinern</a>
+                                    <a href="javascript:;" class="text-autoglas underline font-normal text-xs md:text-sm">Suche verfeinern</a>
 
                                     <div>
-                                        <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-primary text-white text-xs px-8 py-1.5">
+                                        <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-autoglas text-white text-xs px-8 py-1.5">
                                     </div>
                                 </div>
 
@@ -599,20 +559,20 @@
     
     <!-- Footer -->
 
-    <footer class="bg-secondary-2 py-4">
-        <div class="max-w-6xl px-4 mx-auto flex md:items-center justify-between text-secondary-4">
+    <footer class="bg-secondary-3 py-4">
+        <div class="max-w-6xl px-4 mx-auto flex md:items-center justify-between text-white">
             
             <div class="w-1/2 md:w-auto text-xs">© ORIGINALTEILE</div>
         
             <div class="w-1/2 md:w-auto">
                 <ul class="flex flex-wrap -mx-2">
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="kontakt.html" class="px-1 border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Kontakt</a></li>
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Sitemap</a></li>
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Impressum</a></li>
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Rechtliche Hinweise</a></li>
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Datenschutz &amp; Cookies</a></li>
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Disclaimer</a></li>
-                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="partner.html" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-secondary-4 hover:text-white hover:underline">Partner Login</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="kontakt.html" class="px-1 border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Kontakt</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Sitemap</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Impressum</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Rechtliche Hinweise</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Datenschutz &amp; Cookies</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="#" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Disclaimer</a></li>
+                    <li class="w-1/2 md:w-auto mb-2 md:mb-0 block md:inline-block"><a href="partner.html" class="px-1 md:border-l border-x-secondary-4 leading-none text-xs uppercase text-white hover:underline">Partner Login</a></li>
                 </ul>
             </div>
         </div>
@@ -622,6 +582,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/js/multiselect.js"></script>
     <script src="./src/js/script.js"></script>
+    <script src="src/js/fslightbox.js"></script>
 
 
 </body>

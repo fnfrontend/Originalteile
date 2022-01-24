@@ -3,254 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Originalteile</title>
+  <title>Autofit</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link href="src/multiselect.css" rel="stylesheet">
   <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-cover bg-top bg-no-repeat bg-fixed overflow-x-hidden" style="background-image:url(src/images/hintergrund-originalteile.jpg);">
+<body class="bg-cover bg-top bg-no-repeat bg-fixed overflow-x-hidden" style="background-image:url(src/images/autofit-bg.jpg);">
 
     <!-- Header -->
     <header class="bg-white shadow-sm">
         <div class="container py-3 flex flex-wrap lg:flex-nowrap items-center justify-between">
             <div class="logo">
                 <a href="index.html">
-                    <img src="./src/images/logo.png" alt="Originalteile" class="w-44 md:w-auto">
+                    <img src="./src/images/autofit.png" alt="Autofit" class="w-44 md:w-auto max-h-[60px]">
                 </a>
             </div>
 
             <div class="flex md:hidden">
-                <a href="javascript:void(0);" id="searchMenu" class="flex bg-primary text-white h-8 w-8 mr-2 justify-center items-center" style="display:none;">
+                <a href="javascript:void(0);" id="searchMenu" class="flex bg-autofit text-white h-8 w-8 mr-2 justify-center items-center" style="display:none;">
                     <svg class="w-4" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/></svg>
                 </a>
 
-                <a href="Javascript:void(0)" id="toggleMenu" class="bg-primary text-white h-8 w-8 px-2 flex items-center justify-center">
-                    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 icon-bars"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
-                    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-3.5 icon-close hidden"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>
+                <a href="Javascript:void(0)" id="toggleMenu" class="bg-autofit text-white h-8 px-2 flex items-center justify-center">
+                    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
                 </a>
             </div>
 
-            <a href="javascript:void(0);" id="searchBtn" class="flex lg:hidden bg-primary text-white text-sm px-1.5 sm:px-2.5 py-1 mt-6 mb-2 md:my-0 w-full md:w-auto justify-center">
+            <a href="javascript:void(0);" id="searchBtn" class="flex lg:hidden bg-autofit text-white text-sm px-1.5 sm:px-2.5 py-1 mt-6 mb-2 md:my-0 w-full md:w-auto justify-center">
                 <svg class="w-4 mr-1.5" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/></svg>
                 <span class="md:inline-block">Kfz-Werkstätten &amp; Teilehändler suchen</span>
             </a>
 
             <nav id="navbar" class="w-full absolute md:relative top-[4.75rem] md:top-0 left-0 z-50 bg-white md:bg-transparent lg:w-auto mt-3 lg:mt-0 hidden md:inline-block">
                 <ul class="flex flex-col md:flex-row items-center md:justify-center lg:justify-end font-display -mx-4 md:-ml-0 md:-mr-3 border-t border-black md:border-0">
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="uber-originalteile.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Über Originalteile</a></li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="freie-werkstatt.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Freie Werkstatt</a></li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="news.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">News</a></li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0 dropdown-menu">
-                        <a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Spezialisierungen</a>
-
-                        <div class="dropdown md:hidden md:absolute md:shadow-1 bg-lite w-full top-12 mt-3.5 -mb-3.5 md:my-0">
-                            <ul class="-mx-4 md:mx-0">
-                                <li class="border-t border-black md:border-0"><a href="antriebs.html" class="text-sm uppercase font-bold text-[#e36302] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Antrieb</a></li>
-                                <li class="border-t border-black md:border-0"><a href="autoglas.html" class="text-sm font-bold text-[#B8C0D5] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Autoglas</a></li>
-                                <li class="border-t border-black md:border-0"><a href="klima.html" class="text-sm uppercase font-bold text-[#007eb0] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Klima</a></li>
-                                <li class="border-t border-black md:border-0"><a href="turbolader.html" class="text-sm uppercase font-bold text-[#be9b00] hover:text-primary font-display text-center px-5 py-3.5 md:py-2.5 block">Turbolader</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-primary tracking-tighter block">Suche</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="freie-werkstatt.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autofit tracking-tighter block">Mobilitätsgarantie</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="index.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autofit tracking-tighter block">Originalteile</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="news.html" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autofit tracking-tighter block">News</a></li>
+                    <li class="w-full md:w-auto mx-2 xl:mx-3 py-3.5 md:py-4 border-b border-black md:border-0 px-4 md:px-0"><a href="#" class="text-base md:text-lg text-center uppercase font-bold text-secondary-3 hover:text-autofit tracking-tighter block">Suche</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <div class="mobile-search-box hidden bg-white shadow-1 py-5 px-3 mb-5">
-        <div class="text-right">
-            <a href="Javascript:void(0)" id="hideSearch" class="bg-primary text-white h-7 w-7 px-2 inline-flex items-center justify-center opened">
-                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-3 icon-close"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>
-            </a>
-        </div>
-
-        <div class="mt-3 mb-2">
-            <input type="text" class="search-fields" style="background-image:url('src/images/location-icon.png')" placeholder="Ort oder PLZ eingeben">
-        </div>
-
-        <div class="hidden">
-            <div class="flex items-center justify-between mb-2.5">
-                <div class="order-1 w-[30%]">
-                    <select class="h-9 w-full shadow-2 border border-secondary-6">
-                        <option value="0">----</option>
-                        <option value="25" selected="selected">25</option>
-                        <option value="50">50</option>
-                        <option value="75">75</option>
-                        <option value="100">100</option>
-                    </select>
-                </div>
-                <div class="font-bold text-sm py-2 order-0 text-secondary-1">Partner anzeigen im Umkreis von</div>
-            </div>
-        </div>
-
-        <div class="mb-2 hidden">
-            <select multiple="multiple" id="multiselect1">
-                <option value="1" selected="selected">Alle</option>
-                <option value="22">Klima</option>
-                <option value="23">Antrieb</option>
-                <option value="576">Autoglas</option>
-                <option value="604">Turbolader</option>
-            </select>
-        </div>
-
-        <div class="mb-2">
-            <input type="text" class="search-fields" style="background-image:url('src/images/firmenname-icon.png')" placeholder="Firmenname">
-        </div>
-
-        <div class="flex flex-wrap justify-start">
-            <div class="pr-4">
-                <label class="inline-block search-checkbox cursor-pointer text-secondary-1">
-                    <input class="checkbox" type="checkbox" name="chck" value="1" id="searchWerkstatt1" onclick="WerkstattToggle(event, 'WerkstetOption1')">
-                    <i class="state"></i>
-                    <span class="font-bold pl-7 text-sm bg-no-repeat bg-left bg-contain" style="background-image:url(./src/images/werkstatt-icon.png);">Werkstatt</span>
-                </label>
-            </div>
-
-            <div>
-                <label class="inline-block search-checkbox cursor-pointer text-secondary-1">
-                    <input class="checkbox" type="checkbox" name="chck" value="2" id="searchKfz1" onclick="KfzToggle(event, 'KfzOption1')" >
-                    <i class="state"></i>
-                    <span class="font-bold pl-10 text-sm bg-no-repeat bg-left bg-contain" style="background-image:url(./src/images/kfz-teile-icon.png);">Kfz-Teile & Zubehör</span>
-                </label>
-            </div>
-        </div>
-        
-        <div>
-            <div id="WerkstetOption1" class="border border-secondary-7 px-2.5 mb-5 dropdown-arrow hidden">
-                <div id="toggleHeaderWerkstet" class="toggle flex w-full items-center text-secondary-1 cursor-pointer font-body font-bold text-base md:text-lg pl-1 leading-[50px]">Werkstattleistungen</div>
-                <div class="targetWerkstet hidden">
-                    <ul class="checkbox-list w-1/2 pl-4 float-left mb-2.5">
-                        <li class="checkbox-small"> <label class="w-form-label" title="Achsvermessung"> <input class="w-checkbox-input" type="checkbox" name="tx_vcs_pi1" value="25"> <i class="state"></i> <span class="label">Achsvermessung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Airbrush"> <input type="checkbox" name="tx_vcs_pi1" value="27"> <i class="state"></i> <span class="label">Airbrush</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Anhänger"> <input type="checkbox" name="tx_vcs_pi1" value="28"> <i class="state"></i> <span class="label">Anhänger</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Anhängerkupplung"> <input type="checkbox" name="tx_vcs_pi1" value="29"> <i class="state"></i> <span class="label">Anhängerkupplung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Auspuff"> <input type="checkbox" name="tx_vcs_pi1" value="30"> <i class="state"></i> <span class="label">Auspuff</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Autoaufbauten"> <input type="checkbox" name="tx_vcs_pi1" value="31"> <i class="state"></i> <span class="label">Autoaufbauten</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Autogas"> <input type="checkbox" name="tx_vcs_pi1" value="32"> <i class="state"></i> <span class="label">Autogas</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Autowäsche"> <input type="checkbox" name="tx_vcs_pi1" value="33"> <i class="state"></i> <span class="label">Autowäsche</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Beleuchtung"> <input type="checkbox" name="tx_vcs_pi1" value="35"> <i class="state"></i> <span class="label">Beleuchtung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Benzineinspritzung"> <input type="checkbox" name="tx_vcs_pi1" value="36"> <i class="state"></i> <span class="label">Benzineinspritzung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Bremsen"> <input type="checkbox" name="tx_vcs_pi1" value="37"> <i class="state"></i> <span class="label">Bremsen</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Car-Hifi"> <input type="checkbox" name="tx_vcs_pi1" value="38"> <i class="state"></i> <span class="label">Car-Hifi</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Diesel"> <input type="checkbox" name="tx_vcs_pi1" value="145"> <i class="state"></i> <span class="label">Diesel</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Dieseleinspritzung"> <input type="checkbox" name="tx_vcs_pi1" value="39"> <i class="state"></i> <span class="label">Dieseleinspritzung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Elektronik/Elektrik"> <input type="checkbox" name="tx_vcs_pi1" value="40"> <i class="state"></i> <span class="label">Elektronik/Elektrik</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Fahrzeugaufbereitung"> <input type="checkbox" name="tx_vcs_pi1" value="34"> <i class="state"></i> <span class="label">Fahrzeugaufbereitung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Fuhrparkbetreuung"> <input type="checkbox" name="tx_vcs_pi1" value="147"> <i class="state"></i> <span class="label">Fuhrparkbetreuung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Getriebe"> <input type="checkbox" name="tx_vcs_pi1" value="41"> <i class="state"></i> <span class="label">Getriebe</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Glasreparatur"> <input type="checkbox" name="tx_vcs_pi1" value="42"> <i class="state"></i> <span class="label">Glasreparatur</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Hybrid"> <input type="checkbox" name="tx_vcs_pi1" value="148"> <i class="state"></i> <span class="label">Hybrid</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Klima Service"> <input type="checkbox" name="tx_vcs_pi1" value="43"> <i class="state"></i> <span class="label">Klima Service</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Lackiererei"> <input type="checkbox" name="tx_vcs_pi1" value="44"> <i class="state"></i> <span class="label">Lackiererei</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Leicht-LKW"> <input type="checkbox" name="tx_vcs_pi1" value="45"> <i class="state"></i> <span class="label">Leicht-LKW</span> </label></li>
-                    </ul>
-                    
-                    <ul class="checkbox-list w-1/2 pl-4 float-left mb-2.5">
-                        <li class="checkbox-small"> <label class="w-form-label" title="Mobile Kommunikation"> <input type="checkbox" value="46"> <i class="state"></i> <span class="label">Mobile Kommunikation</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Moped Autos"> <input type="checkbox" value="47"> <i class="state"></i> <span class="label">Moped Autos</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Motorreparatur"> <input type="checkbox" value="48"> <i class="state"></i> <span class="label">Motorreparatur</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="NKW"> <input type="checkbox" value="49"> <i class="state"></i> <span class="label">NKW</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Oldtimer"> <input type="checkbox" value="50"> <i class="state"></i> <span class="label">Oldtimer</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Ölwechsel"> <input type="checkbox" value="149"> <i class="state"></i> <span class="label">Ölwechsel</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Pickerl"> <input type="checkbox" value="150"> <i class="state"></i> <span class="label">Pickerl</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Reifen Service"> <input type="checkbox" value="51"> <i class="state"></i> <span class="label">Reifen Service</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Rußpartikelfilter"> <input type="checkbox" value="52"> <i class="state"></i> <span class="label">Rußpartikelfilter</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Schnellservice"> <input type="checkbox" value="54"> <i class="state"></i> <span class="label">Schnellservice</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Spenglerei"> <input type="checkbox" value="55"> <i class="state"></i> <span class="label">Spenglerei</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Steinschlagreparatur"> <input type="checkbox" value="56"> <i class="state"></i> <span class="label">Steinschlagreparatur</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Stoßdämpfer"> <input type="checkbox" value="57"> <i class="state"></i> <span class="label">Stoßdämpfer</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Tankstelle"> <input type="checkbox" value="58"> <i class="state"></i> <span class="label">Tankstelle</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Tuning"> <input type="checkbox" value="151"> <i class="state"></i> <span class="label">Tuning</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Turbolader"> <input type="checkbox" value="377"> <i class="state"></i> <span class="label">Turbolader</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Urlaubscheck"> <input type="checkbox" value="152"> <i class="state"></i> <span class="label">Urlaubscheck</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="US Cars"> <input type="checkbox" value="153"> <i class="state"></i> <span class="label">US Cars</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Windschutzscheibentausch"> <input type="checkbox" value="378"> <i class="state"></i> <span class="label">Windschutzscheibentausch</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Wintercheck"> <input type="checkbox" value="154"> <i class="state"></i> <span class="label">Wintercheck</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Wohnmobil"> <input type="checkbox" value="59"> <i class="state"></i> <span class="label">Wohnmobil</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Zahnriemen"> <input type="checkbox" value="155"> <i class="state"></i> <span class="label">Zahnriemen</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Zweirad"> <input type="checkbox" value="60"> <i class="state"></i> <span class="label">Zweirad</span> </label></li>
-                    </ul>
-
-                    <div class="clear-both"></div>
-                </div>
-            </div>
-
-            <div id="KfzOption1" class="border border-secondary-7 px-2.5 dropdown-arrow hidden mb-[50px]">
-                <div id="toggleHeaderKfz" class="toggle flex w-full items-center text-secondary-1 cursor-pointer font-body font-bold text-base md:text-lg pl-1 leading-[50px]">Kfz - Teile & Zubehör</div>
-                <div class="targetKfz hidden">
-                    <ul class="checkbox-list w-1/2 pl-4 float-left mb-2.5">
-                        <li class="checkbox-small"> <label class="w-form-label" title="Achsvermessung"> <input class="w-checkbox-input" type="checkbox" name="tx_vcs_pi1" value="25"> <i class="state"></i> <span class="label">Achsvermessung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Airbrush"> <input type="checkbox" name="tx_vcs_pi1" value="27"> <i class="state"></i> <span class="label">Airbrush</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Anhänger"> <input type="checkbox" name="tx_vcs_pi1" value="28"> <i class="state"></i> <span class="label">Anhänger</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Anhängerkupplung"> <input type="checkbox" name="tx_vcs_pi1" value="29"> <i class="state"></i> <span class="label">Anhängerkupplung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Auspuff"> <input type="checkbox" name="tx_vcs_pi1" value="30"> <i class="state"></i> <span class="label">Auspuff</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Autoaufbauten"> <input type="checkbox" name="tx_vcs_pi1" value="31"> <i class="state"></i> <span class="label">Autoaufbauten</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Autogas"> <input type="checkbox" name="tx_vcs_pi1" value="32"> <i class="state"></i> <span class="label">Autogas</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Autowäsche"> <input type="checkbox" name="tx_vcs_pi1" value="33"> <i class="state"></i> <span class="label">Autowäsche</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Beleuchtung"> <input type="checkbox" name="tx_vcs_pi1" value="35"> <i class="state"></i> <span class="label">Beleuchtung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Benzineinspritzung"> <input type="checkbox" name="tx_vcs_pi1" value="36"> <i class="state"></i> <span class="label">Benzineinspritzung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Bremsen"> <input type="checkbox" name="tx_vcs_pi1" value="37"> <i class="state"></i> <span class="label">Bremsen</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Car-Hifi"> <input type="checkbox" name="tx_vcs_pi1" value="38"> <i class="state"></i> <span class="label">Car-Hifi</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Diesel"> <input type="checkbox" name="tx_vcs_pi1" value="145"> <i class="state"></i> <span class="label">Diesel</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Dieseleinspritzung"> <input type="checkbox" name="tx_vcs_pi1" value="39"> <i class="state"></i> <span class="label">Dieseleinspritzung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Elektronik/Elektrik"> <input type="checkbox" name="tx_vcs_pi1" value="40"> <i class="state"></i> <span class="label">Elektronik/Elektrik</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Fahrzeugaufbereitung"> <input type="checkbox" name="tx_vcs_pi1" value="34"> <i class="state"></i> <span class="label">Fahrzeugaufbereitung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Fuhrparkbetreuung"> <input type="checkbox" name="tx_vcs_pi1" value="147"> <i class="state"></i> <span class="label">Fuhrparkbetreuung</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Getriebe"> <input type="checkbox" name="tx_vcs_pi1" value="41"> <i class="state"></i> <span class="label">Getriebe</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Glasreparatur"> <input type="checkbox" name="tx_vcs_pi1" value="42"> <i class="state"></i> <span class="label">Glasreparatur</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Hybrid"> <input type="checkbox" name="tx_vcs_pi1" value="148"> <i class="state"></i> <span class="label">Hybrid</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Klima Service"> <input type="checkbox" name="tx_vcs_pi1" value="43"> <i class="state"></i> <span class="label">Klima Service</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Lackiererei"> <input type="checkbox" name="tx_vcs_pi1" value="44"> <i class="state"></i> <span class="label">Lackiererei</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Leicht-LKW"> <input type="checkbox" name="tx_vcs_pi1" value="45"> <i class="state"></i> <span class="label">Leicht-LKW</span> </label></li>
-                    </ul>
-                    
-                    <ul class="checkbox-list w-1/2 pl-4 float-left mb-2.5">
-                        <li class="checkbox-small"> <label class="w-form-label" title="Mobile Kommunikation"> <input type="checkbox" value="46"> <i class="state"></i> <span class="label">Mobile Kommunikation</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Moped Autos"> <input type="checkbox" value="47"> <i class="state"></i> <span class="label">Moped Autos</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Motorreparatur"> <input type="checkbox" value="48"> <i class="state"></i> <span class="label">Motorreparatur</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="NKW"> <input type="checkbox" value="49"> <i class="state"></i> <span class="label">NKW</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Oldtimer"> <input type="checkbox" value="50"> <i class="state"></i> <span class="label">Oldtimer</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Ölwechsel"> <input type="checkbox" value="149"> <i class="state"></i> <span class="label">Ölwechsel</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Pickerl"> <input type="checkbox" value="150"> <i class="state"></i> <span class="label">Pickerl</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Reifen Service"> <input type="checkbox" value="51"> <i class="state"></i> <span class="label">Reifen Service</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Rußpartikelfilter"> <input type="checkbox" value="52"> <i class="state"></i> <span class="label">Rußpartikelfilter</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Schnellservice"> <input type="checkbox" value="54"> <i class="state"></i> <span class="label">Schnellservice</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Spenglerei"> <input type="checkbox" value="55"> <i class="state"></i> <span class="label">Spenglerei</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Steinschlagreparatur"> <input type="checkbox" value="56"> <i class="state"></i> <span class="label">Steinschlagreparatur</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Stoßdämpfer"> <input type="checkbox" value="57"> <i class="state"></i> <span class="label">Stoßdämpfer</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Tankstelle"> <input type="checkbox" value="58"> <i class="state"></i> <span class="label">Tankstelle</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Tuning"> <input type="checkbox" value="151"> <i class="state"></i> <span class="label">Tuning</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Turbolader"> <input type="checkbox" value="377"> <i class="state"></i> <span class="label">Turbolader</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Urlaubscheck"> <input type="checkbox" value="152"> <i class="state"></i> <span class="label">Urlaubscheck</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="US Cars"> <input type="checkbox" value="153"> <i class="state"></i> <span class="label">US Cars</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Windschutzscheibentausch"> <input type="checkbox" value="378"> <i class="state"></i> <span class="label">Windschutzscheibentausch</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Wintercheck"> <input type="checkbox" value="154"> <i class="state"></i> <span class="label">Wintercheck</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Wohnmobil"> <input type="checkbox" value="59"> <i class="state"></i> <span class="label">Wohnmobil</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Zahnriemen"> <input type="checkbox" value="155"> <i class="state"></i> <span class="label">Zahnriemen</span> </label></li>
-                        <li class="checkbox-small"> <label class="w-form-label" title="Zweirad"> <input type="checkbox" value="60"> <i class="state"></i> <span class="label">Zweirad</span> </label></li>
-                    </ul>
-
-                    <div class="clear-both"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex  justify-end mt-4">
-            <div>
-                <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-primary text-white text-xs px-8 py-1.5">
-            </div>
-        </div>
-
-    </div>
+    
     <!-- Breadcrumb -->
-    <div class="container breadcrumb h-5 mt-[50px]">
-        <ul class="text-white text-xs flex">
-            <li><a class="breadcrumblink" href="index.html">Home</a></li>
-            <li class="delimeter px-1">&gt;</li>
-            <li><span>News</span></li>
-        </ul>
-    </div>
+    <div class="container breadcrumb h-5 mt-5"></div>
 
     <!-- Main Body -->
     <main class="mt-1.5">
@@ -259,65 +55,21 @@
                 <div class="w-full lg:w-7/12 xl:w-[690px] xl:flex-none">
 
                     <div class="max-w-full lg:max-w-[520px] xl:max-w-[630px] mb-5">
-                        <div class="title-bar-top"></div>
-                        <div class="bg-lite shadow-1 p-3.5 md:p-5 relative z-10">
-                            <h1 class="font-display font-bold tracking-tight text-lg leading-tight md:text-[30px] lg:text-[22px]">NEWS</h1>
+                        <div class="title-bar-top autofit"></div>
+                        <div class="bg-lite shadow-1 relative z-10 md:p-5 p-3.5">
+                            <h1 class="font-display font-bold tracking-tight text-lg leading-tight md:text-[30px] lg:text-[22px]">AUTOFIT KFZ-WERKSTATT. FÜR ALLE AUTOMARKEN. GANZ IN IHRER NÄHE.</h1>
                         </div>
-                        <div class="title-bar-bottom"></div>
+                        <div class="title-bar-bottom autofit"></div>
                     </div>
 
                     <div class="max-w-full lg:max-w-[520px] xl:max-w-[630px] bg-lite shadow-1 p-5 font-body">
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>  
+                        <h3 class="font-body leading-tight text-lg font-bold mb-4">Sie suchen eine professionelle Autowerkstatt die bei Auto-Reparatur und Auto-Service preiswert ist?</h3>
 
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>  
-
-                        <div class="flex flex-wrap pb-4 mb-5 border-b border-secondary-7">
-                            <div class="w-full sm:w-1/4">
-                                <a href="news-details.html"><img src="./src/images/news.jpg" alt=""></a>
-                            </div>
-                            <div class="w-full sm:w-3/4 mt-2.5 sm:mt-0 sm:px-4">
-                                <div class="text-secondary-5 text-xs">11.01.2022</div>
-                                <h3 class="text-sm mb-2.5 font-bold text-black"> <a title="Es ist Zeit für Frostschutz " href="/news/detail/es-ist-zeit-fuer-frostschutz-1140/"> Es ist Zeit für Frostschutz </a></h3>
-                                <p class="text-secondary-5 text-sm">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen und bei Bedarf mit Scheibenfrostschutz respektive Kühlerfrostschutz zu versehen.</p>
-                            </div>
-                        </div>  
-
-                        <ul class="pagination">
-                            <li class="current"><span>1</span></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">›</a></li>
-                            <li><a href="#">»</a></li>
-                        </ul>
+                        <p class="mb-5 font-body text-secondary-5 text-sm">
+                            In der <b>AUTOFIT KFZ-Werkstatt</b> ist Ihr Fahrzeug in den besten Händen. Kleine und große Reparaturen sowie Servicearbeiten an allen Automarken und Fahrzeugmodellen werden nach Herstellervorgaben und mit <b>Original-Ersatzteilen</b> durchgeführt. Damit haben Sie die Gewissheit, dass Ihr Auto sicher und jederzeit einsatzbereit ist. Und auch bei Ihrem <b>Neuwagen bleibt die Gewährleistung des Herstellers erhalten.
+                                
+                            </b><br><br>Eine AUTOFIT KFZ-Werkstatt in Ihrer Umgebung finden Sie mit einem Klick. Wenn Sie die Postleitzahl oder den Ort eingeben, werden Ihnen die Werkstätten in Ihrer Umgebung angezeigt. Suchen Sie eine bestimmte Kfz-Reparatur oder Service-Leistung? Dann wählen Sie aus dem umfangreichen Angebot an Werkstattleistungen aus.<br><br>
+                        </p>
                     </div>
                 </div>
 
@@ -329,7 +81,7 @@
                         <div class="w-full md:w-1/2 lg:w-full px-2.5 lg:px-0">
                             <div class="bg-lite shadow-1 p-4 mb-5">
                                 <h5 class="text-xs md:text-sm font-display font-semibold text-secondary-4">News</h5>
-                                <h4><a href="#" class="text-sm md:text-base font-condensed text-primary uppercase">Es ist Zeit für Frostschutz</a></h4>
+                                <h4><a href="#" class="text-sm md:text-base font-condensed text-autofit uppercase">Es ist Zeit für Frostschutz</a></h4>
 
                                 <ul class="news-items">
                                     <!-- News Item -->
@@ -341,7 +93,7 @@
                                         <div class="left">
                                             <p class="text-xs md:text-sm text-secondary-1">Im Grunde schon vor der Winterzeit, spätestens aber vor Kälteeinbruch ist es an der Zeit, Wischwasser und Kühlmittel zu überprüfen...</p>
 
-                                            <a href="#" class="text-primary font-bold hover:underline">weiterlesen</a>
+                                            <a href="#" class="text-autofit font-bold hover:underline">weiterlesen</a>
                                         </div>
                                     </li>
 
@@ -354,7 +106,7 @@
                                         <div class="left">
                                             <p class="text-xs md:text-sm text-secondary-1">Wie bemerkt man, dass eine Spule nicht mehr arbeitet? Wenn das Auto noch über das alte System verfügt, bei dem eine zentrale...</p>
 
-                                            <a href="#" class="text-primary font-bold hover:underline">weiterlesen</a>
+                                            <a href="#" class="text-autofit font-bold hover:underline">weiterlesen</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -538,10 +290,10 @@
                                 </div>
 
                                 <div class="flex justify-between mt-4">
-                                    <a href="javascript:;" class="text-primary underline font-normal text-xs md:text-sm">Suche verfeinern</a>
+                                    <a href="javascript:;" class="text-autofit underline font-normal text-xs md:text-sm">Suche verfeinern</a>
 
                                     <div>
-                                        <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-primary text-white text-xs px-8 py-1.5">
+                                        <input type="submit" name="tx_vcs_pi1[submit]" value="Suchen" class="bg-autofit text-secondary-2 text-xs px-8 py-1.5">
                                     </div>
                                 </div>
 
@@ -622,6 +374,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/js/multiselect.js"></script>
     <script src="./src/js/script.js"></script>
+    <script src="src/js/fslightbox.js"></script>
 
 
 </body>
