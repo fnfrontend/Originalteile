@@ -20,9 +20,29 @@
     font-display: swap;
 }
 
-body {
-    @apply font-body;
+@font-face {
+    font-family: 'AvantGarde LT Cond';
+    src: url('../src/fonts/AvantGardeLT-CondBold.woff2') format('woff2'),
+        url('../src/fonts/AvantGardeLT-CondBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic';
+    src: url('../src/fonts/ITCAvantGardePro-Demi.woff2') format('woff2'),
+        url('../src/fonts/ITCAvantGardePro-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {@apply font-body;}
+
+input, select {@apply text-sm;}
 
 .dropdown-menu {
     @apply relative;
@@ -31,23 +51,34 @@ body {
     @apply block;
 }
 
-.bars {@apply relative;}
-.bars:after {@apply absolute block bg-primary;
-    content:"";
-    left:98%;
-    bottom:0;
-    width:30px;
-    height:29.5px;
-    transform:skew(-0.05turn, 0deg);
-    -webkit-transform:skew(-0.05turn, 0deg);
-}
+
+.title-bar-top{@apply bg-no-repeat bg-auto;height: 30px;background-image: url(../src/images/title-top-bar.png);background-position: 0px 0px;}
+.title-bar-bottom {@apply bg-no-repeat bg-auto;height: 30px;background-image: url(../src/images/title-bottom-bar.png);background-position: 0px 0px;}
+
+.title-bar-top.autofit{background-image: url(../src/images/title-top-bar-autofit.png);}
+.title-bar-bottom.autofit {background-image: url(../src/images/title-bottom-bar-autofit.png);}
+
+.title-bar-top.autodienst{background-image: url(../src/images/title-top-bar-autodienst.png);}
+.title-bar-bottom.autodienst {background-image: url(../src/images/title-bottom-bar-autodienst.png);}
+
+.title-bar-top.autoglas{background-image: url(../src/images/title-top-bar-autoglas.png);}
+.title-bar-bottom.autoglas {background-image: url(../src/images/title-bottom-bar-autoglas.png);}
+
+.title-bar-top.klima{background-image: url(../src/images/title-top-bar-klima.png);}
+.title-bar-bottom.klima {background-image: url(../src/images/title-bottom-bar-klima.png);}
+
+.title-bar-top.turbolader{background-image: url(../src/images/title-top-bar-turbolader.png);}
+.title-bar-bottom.turbolader {background-image: url(../src/images/title-bottom-bar-turbolader.png);}
+
+
 
 .swiper-button-next:after, .swiper-button-prev:after {
     @apply text-2xl font-bold text-black;
 }
 
 
-.search-fields {@apply pl-14 pr-4 py-4 w-full shadow-2 border outline-none border-secondary-6 focus:border-blue-600 bg-no-repeat; height:50px; background-position: left 15px center;}
+
+.search-fields {@apply pl-12 pr-4 py-4 w-full shadow-2 border outline-none border-secondary-6 focus:border-blue-600 bg-no-repeat; height:50px; background-position: left 15px center;}
 .search-checkbox {@apply mb-1 md:mb-2;}
 .search-checkbox span {@apply ml-1.5 py-2 h-10 inline-block bg-auto;}
 .search-checkbox input {@apply absolute hidden;}
@@ -101,5 +132,53 @@ body {
 
 
 .flex-0-auto {flex: 0 0 auto;}
+
+input.icon-name, textarea.icon-name {@apply bg-no-repeat; background-image:url(../src/images/icon-vorname.png); background-position: left 12px center; }
+input.icon-address, textarea.icon-address {@apply bg-no-repeat; background-image:url(../src/images/icon-strasse.png); background-position: left 12px center; }
+input.icon-plz, textarea.icon-plz {@apply bg-no-repeat; background-image:url(../src/images/icon-plz.png); background-position: left 12px center; }
+input.icon-phone, textarea.icon-phone {@apply bg-no-repeat; background-image:url(../src/images/icon-phone.png); background-position: left 12px center; }
+input.icon-comment, textarea.icon-comment {@apply bg-no-repeat; background-image:url(../src/images/icon-nachricht.png); background-position: left 12px top 12px; }
+input.icon-password, textarea.icon-password {@apply bg-no-repeat; background-image:url(../src/images/icon-passwort.png); background-position: left 12px top 12px; }
+
+
+#toggleMenu.opened .icon-bars {display:none;}
+#toggleMenu.opened .icon-close {display:block !important;}
+
+
+.mobile-search-opened .mobile-search-box{@apply block absolute top-20 md:top-44 md:border-t md:border-gray-200 z-50 w-full;}
+
+
+.news-items li {@apply hidden pt-2.5;}
+.news-items li.active {@apply flex;}
+
+
+.pagination {@apply flex flex-wrap items-start;}
+.pagination li {@apply mr-1.5;}
+.pagination a {@apply w-5 h-5 text-center text-xs bg-secondary-6 text-secondary-5 inline-block leading-[20px];}
+.pagination .current span {@apply w-5 h-5 text-center text-xs bg-primary text-white inline-block leading-[20px];}
+
+
+
+.autodienst-search {@apply relative;}
+.autodienst-search:before {content: '';position: absolute;top: 0;right: 10px;border-left: 110px solid transparent;border-right: 110px solid transparent;border-top: 110px solid #DB3024;}
+
+@media (max-width:1024px) {
+    .autodienst-search:before {border-left: 80px solid transparent;border-right: 80px solid transparent;border-top: 80px solid #DB3024;}
+}
+
+
+#tabs li.active:after, #tabs li.active:before  {content: '';position: absolute;width: 1000px;right: 100%;bottom: -1px;border-bottom: 1px solid #d4d4d4;z-index: 2;}
+#tabs li.active:after {left:100%; right:auto}
+
+
+@media (max-width:475px) {
+    #tabs li {order:0} 
+    #tabs li.active {order:1}
+
+    
+    .title-bar-top, .title-bar-bottom {
+        background-position: -120px 0;
+    }
+}
 
 @tailwind utilities;
