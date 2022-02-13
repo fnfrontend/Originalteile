@@ -63,28 +63,74 @@ var drop = function(info){var o = {
       this.html.drop.classList.toggle('open');
    },
    addOption: function(e, element){ 
+
       var index = Number(element.dataset.index);
+      var alreadyAdded = false;
+
+      this.selected.forEach(function(select, i){
+         if(select.index == index && !select.removed){
+            alreadyAdded = true;
+         }
+      });
+
+      if(alreadyAdded){
+         this.removeOption(e, element);
+         return false;
+      }
+
       element.classList.add("my-class");
-      this.clearStates()
+      
+      if(element.innerHTML === "Alle"){
+         this.selected = [];
+         this.clearStates(true);
+      }
+      else {
+         var selectedArr = this.selected;
+         this.selected.forEach(function(select, i){
+            if(select.index == 0){
+               selectedArr.splice(i, 1);
+            }
+         });
+
+         this.selected = selectedArr;
+         this.clearStates(false);
+      }
+
       this.selected.push({
          index: Number(index),
          state: 'add',
          removed: false
       })
+
       this.options[index].state = 'remove';
-      this.render()
+      this.render();
    },
    removeOption: function(e, element){
       e.stopPropagation();
       this.clearStates()
       var index = Number(element.dataset.index);
+      var allRemoved = 0;
       this.selected.forEach(function(select){
          if(select.index == index && !select.removed){
             select.removed = true
             select.state = 'remove'
          }
-      })
-      this.options[index].state = 'add'
+
+         if(select.removed){
+            allRemoved++;
+         }
+      });
+
+      this.options[index].state = 'add';
+
+      if(allRemoved == this.selected.length){
+         this.selected.push({
+            index: 0,
+            state: 'add',
+            removed: false
+         })
+      }
+      
       this.render();
    },
    load: function(){
@@ -120,7 +166,7 @@ var drop = function(info){var o = {
       var parentHTML = $.template('<div></div>')
       this.selected.forEach(function(select, index){ 
          var option = that.options[select.index];
-         var childHTML = $.template('<span class="item '+ select.state +'">'+ option.html +'</span>')
+         var childHTML = $.template('<span data-index="'+select.index+'" class="item '+ select.state +'">'+ option.html +'</span>')
          var childCloseHTML = $.template(
             '<i class="btnclose" data-index="'+select.index+'"></i></span>')
          childCloseHTML.on('click', function(e){ that.removeOption(e, this) })
@@ -130,11 +176,10 @@ var drop = function(info){var o = {
       this.html.dropDisplay.innerHTML = ''; 
       this.html.dropDisplay.appendChild(parentHTML)
    },
-   renderOptions: function(){  
+   renderOptions: function(){ 
       var that = this;
       var parentHTML = $.template('<div></div>')
       this.options.forEach(function(option, index){
-         console.log("option", option);
          var childHTML = $.template(
             '<a data-index="'+index+'" class="'+ option.state+'">'+ option.html +'</a>')
          childHTML.on('click', function(e){ that.addOption(e, this) })
@@ -143,13 +188,18 @@ var drop = function(info){var o = {
       this.html.dropOptions.innerHTML = '';
       this.html.dropOptions.appendChild(parentHTML)
    },
-   clearStates: function(){
+   clearStates: function(isAll){
       var that = this;
       this.selected.forEach(function(select, index){ 
-         select.state = that.changeState(select.state)
+         select.state = that.changeState(select.state);
       })
-      this.options.forEach(function(option){ 
-         option.state = that.changeState(option.state)
+      this.options.forEach(function(option, i){ 
+         if(i == 0){
+            option.state = !isAll ? '' : that.changeState(option.state);
+         }
+         else {
+            option.state = isAll ? '' : that.changeState(option.state);
+         }
       })
    },
    changeState: function(state){

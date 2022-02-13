@@ -34,11 +34,84 @@ var swiper = new Swiper(".logo-slider", {
 
 // Search form
 document.getElementById('toggleHeaderWerkstet').addEventListener('click', function () {
+    this.classList.toggle('opened');
     toggle(document.querySelectorAll('.targetWerkstet'));
 });
 
 document.getElementById('toggleHeaderKfz').addEventListener('click', function () {
+    this.classList.toggle('opened');
     toggle(document.querySelectorAll('.targetKfz'));
+});
+
+// Search form
+document.getElementById('toggleHeaderWerkstet1').addEventListener('click', function () {
+    this.classList.toggle('opened');
+    toggle(document.querySelectorAll('.targetWerkstet'));
+});
+
+document.getElementById('toggleHeaderKfz1').addEventListener('click', function () {
+    this.classList.toggle('opened');
+    toggle(document.querySelectorAll('.targetKfz'));
+});
+
+
+document.getElementById('clearFilters').addEventListener('click', function () {
+    var that = this;
+    
+
+    if (document.getElementById("searchKfz").checked && document.getElementById("searchWerkstatt").checked) {
+        document.getElementById("searchKfz").click();
+        document.getElementById("searchWerkstatt").click();
+
+        that.classList.remove('filters-opened');
+    }
+    else if (!document.getElementById("searchKfz").checked && !document.getElementById("searchWerkstatt").checked) {
+        document.getElementById("searchKfz").click();
+        document.getElementById("searchWerkstatt").click();
+
+        that.classList.add('filters-opened');
+    } else {
+
+        if (document.getElementById("searchKfz").checked){
+            document.getElementById("searchKfz").click();
+        }
+
+        if (document.getElementById("searchWerkstatt").checked){
+            document.getElementById("searchWerkstatt").click();
+        }
+
+        that.classList.toggle('filters-opened');
+    }
+
+    
+});
+
+document.getElementById('clearFilters1').addEventListener('click', function () {
+
+    if (document.getElementById("searchKfz1").checked && document.getElementById("searchWerkstatt1").checked) {
+        document.getElementById("searchKfz1").click();
+        document.getElementById("searchWerkstatt1").click();
+
+        this.classList.remove('filters-opened');
+    }
+    else if (!document.getElementById("searchKfz1").checked && !document.getElementById("searchWerkstatt1").checked) {
+        document.getElementById("searchKfz1").click();
+        document.getElementById("searchWerkstatt1").click();
+
+        this.classList.add('filters-opened');
+    } else {
+        
+        if (document.getElementById("searchKfz1").checked){
+            this.classList.toggle('filters-opened');
+            document.getElementById("searchKfz1").click();
+        }
+
+        if (document.getElementById("searchWerkstatt1").checked){
+            this.classList.toggle('filters-opened');
+            document.getElementById("searchWerkstatt1").click();
+        }
+    }
+
 });
 
 function toggle (elements, specifiedDisplay) {
@@ -68,18 +141,20 @@ function toggle (elements, specifiedDisplay) {
 
 var myDrop = new drop({
     selector:  '#multiselect',
-    preselected: [1]
+    preselected: [0]
 });
 
 var myDrop = new drop({
     selector:  '#multiselect1',
-    preselected: [1]
+    preselected: [0]
 });
 
 
 /* Menu */
 document.getElementById('toggleMenu').onclick=function(){
     this.classList.toggle('opened');
+    var body = document.getElementsByTagName('body');
+    body[0].classList.remove('mobile-search-opened');
     var x = document.getElementById("navbar");
     if (x.style.display === "none" || x.style.display === "") {
         x.style.display = "block";
@@ -90,11 +165,30 @@ document.getElementById('toggleMenu').onclick=function(){
     }
 };
 
+window.addEventListener('resize', function(event) {
+    var x = document.getElementById("navbar");
+    if(window.innerWidth >= 768){
+        x.style.display = "block";
+    }
+    else {
+        x.style.display = "none";
+        document.getElementById('toggleMenu').classList.remove('opened');
+    }
+}, true);
+
 
 /* Search Menu Mobile */
 document.getElementById('searchBtn').onclick=function(){
     var body = document.getElementsByTagName('body');
     body[0].classList.toggle('mobile-search-opened');
+};
+
+document.getElementById('searchMenu').onclick=function(){
+    var body = document.getElementsByTagName('body');
+    body[0].classList.toggle('mobile-search-opened');
+    document.getElementById('toggleMenu').classList.remove('opened');
+    document.getElementById("navbar").style.display = "none";
+    document.getElementById("searchMenu").style.display = "none";
 };
 
 document.getElementById('hideSearch').onclick=function(){
@@ -198,21 +292,47 @@ if (tab !== null) {
 
 function WerkstattToggle(event, id) {
     var x = document.getElementById(id);
+    var y = document.getElementById("partnerRadius");
+    var z = document.getElementById("specializeOn");
+
+    if(id == 'WerkstetOption'){
+        document.getElementById('clearFilters').classList.add('filters-opened');
+    }
+    else {
+        document.getElementById('clearFilters1').classList.add('filters-opened');
+    }
 
     if (event.srcElement.checked) {
         x.style.display = "block";
+        y.style.display = "block";
+        z.style.display = "block";
     } else {
         x.style.display = "none";
-    }    
+        y.style.display = "none";
+        z.style.display = "none";
+    }  
 }
 
 function KfzToggle(event, id) {
     var x = document.getElementById(id);
+    var y = document.getElementById("partnerRadius");
+    var z = document.getElementById("specializeOn");
+
+    if(id == 'KfzOption'){
+        document.getElementById('clearFilters').classList.add('filters-opened');
+    }
+    else {
+        document.getElementById('clearFilters1').classList.add('filters-opened');
+    }
 
     if (event.srcElement.checked) {
         x.style.display = "block";
+        y.style.display = "block";
+        z.style.display = "block";
     } else {
         x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
     }    
 }
 

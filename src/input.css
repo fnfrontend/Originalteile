@@ -55,6 +55,9 @@ input, select {@apply text-sm;}
 .title-bar-top{@apply bg-no-repeat bg-auto;height: 30px;background-image: url(../src/images/title-top-bar.png);background-position: 0px 0px;}
 .title-bar-bottom {@apply bg-no-repeat bg-auto;height: 30px;background-image: url(../src/images/title-bottom-bar.png);background-position: 0px 0px;}
 
+.title-bar-top.antrieb{background-image: url(../src/images/title-top-bar-antrieb.png);}
+.title-bar-bottom.antrieb {background-image: url(../src/images/title-bottom-bar-antrieb.png);}
+
 .title-bar-top.autofit{background-image: url(../src/images/title-top-bar-autofit.png);}
 .title-bar-bottom.autofit {background-image: url(../src/images/title-bottom-bar-autofit.png);}
 
@@ -89,16 +92,24 @@ input, select {@apply text-sm;}
 
 
 .checkbox-small {@apply text-secondary-1 mt-2.5 mb-1.5; font-size:13px;}
-.checkbox-small label {@apply flex items-center;}
-.checkbox-small label span {@apply ml-1 inline-block bg-auto text-ellipsis overflow-hidden whitespace-nowrap w-4/5;}
+.checkbox-small label {}
+.checkbox-small label span {@apply text-[13px] ml-1 inline-block text-ellipsis overflow-hidden align-top w-4/5; width: calc(100% - 25px);}
 .checkbox-small label input {@apply absolute hidden;}
 .checkbox-small label i {@apply inline-block;height:15px; width:15px; vertical-align: middle;padding-right: 5px;background-image: url("../src/images/checkbox-small.png"); } 
 .checkbox-small label input:checked + i {background-position: 0 -15px;}
 
 .dropdown-arrow .toggle {@apply bg-no-repeat; background-image:url(../src/images/icon-arrow.svg); background-size:16px; background-position:right 5px center;}
+.dropdown-arrow .toggle.opened {@apply text-primary;}
 
 #toggleHeaderWerkstet:before {@apply h-9 w-8 inline-flex bg-no-repeat bg-left mr-1; content:''; background-image: url(../src/images/werkstatt-icon.png);}
 #toggleHeaderKfz:before {@apply h-9 w-8 inline-flex bg-no-repeat bg-left mr-1; content:''; background-image: url(../src/images/kfz-teile-icon.png);}
+
+#toggleHeaderWerkstet.opened:before {background-image: url(../src/images/werkstatt-icon-red.png);}
+#toggleHeaderKfz.opened:before {background-image: url(../src/images/icon-kfzteile-red.png);}
+
+
+#clearFilters:after, #clearFilters1:after {content:' verfeinern';}
+#clearFilters.filters-opened:after, #clearFilters1.filters-opened:after {content:' zurücksetzen';}
 
 
 /* Accordian */
@@ -144,8 +155,9 @@ input.icon-password, textarea.icon-password {@apply bg-no-repeat; background-ima
 #toggleMenu.opened .icon-bars {display:none;}
 #toggleMenu.opened .icon-close {display:block !important;}
 
-
-.mobile-search-opened .mobile-search-box{@apply block absolute top-20 md:top-44 md:border-t md:border-gray-200 z-50 w-full;}
+@media(max-width:992px){
+    .mobile-search-opened .mobile-search-box{@apply block absolute top-20 md:top-[106px] md:border-t md:border-gray-200 z-50 w-full;}
+}
 
 
 .news-items li {@apply hidden pt-2.5;}
@@ -154,7 +166,7 @@ input.icon-password, textarea.icon-password {@apply bg-no-repeat; background-ima
 
 .pagination {@apply flex flex-wrap items-start;}
 .pagination li {@apply mr-1.5;}
-.pagination a {@apply w-5 h-5 text-center text-xs bg-secondary-6 text-secondary-5 inline-block leading-[20px];}
+.pagination a {@apply w-5 h-5 text-center hover:bg-primary hover:text-white text-xs bg-secondary-6 text-secondary-5 inline-block leading-[20px];}
 .pagination .current span {@apply w-5 h-5 text-center text-xs bg-primary text-white inline-block leading-[20px];}
 
 
