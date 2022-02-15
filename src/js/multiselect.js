@@ -63,7 +63,6 @@ var drop = function(info){var o = {
       this.html.drop.classList.toggle('open');
    },
    addOption: function(e, element){ 
-
       var index = Number(element.dataset.index);
       var alreadyAdded = false;
 
@@ -218,6 +217,18 @@ var drop = function(info){var o = {
          if(select.index == index && select.removed == false) check = true
       })
       return check
+   },
+   reset: function(){
+      this.selected = [];
+      this.clearStates(true);
+
+      this.selected.push({
+         index: 0,
+         state: 'add',
+         removed: false
+      })
+
+      this.render();
    }
 }; o.init(); return o;}
 

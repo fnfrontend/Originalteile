@@ -54,10 +54,25 @@ document.getElementById('toggleHeaderKfz1').addEventListener('click', function (
     toggle(document.querySelectorAll('.targetKfz'));
 });
 
-
 document.getElementById('clearFilters').addEventListener('click', function () {
     var that = this;
     
+    document.querySelectorAll('.search-fields').forEach(function(item){
+        item.value = "";
+    });
+    document.querySelectorAll('.checkbox-list input[type="checkbox"]').forEach(function(item){
+        item.checked = false;
+    });
+
+    if (document.getElementById("toggleHeaderWerkstet").classList.contains('opened')) {
+        document.getElementById("toggleHeaderWerkstet").click();
+    }
+
+    if (document.getElementById("toggleHeaderKfz").classList.contains('opened')) {
+        document.getElementById("toggleHeaderKfz").click();
+    }
+
+    myDrop.reset();
 
     if (document.getElementById("searchKfz").checked && document.getElementById("searchWerkstatt").checked) {
         document.getElementById("searchKfz").click();
@@ -87,6 +102,21 @@ document.getElementById('clearFilters').addEventListener('click', function () {
 });
 
 document.getElementById('clearFilters1').addEventListener('click', function () {
+
+    document.querySelectorAll('.search-fields').forEach(function(item){
+        item.value = "";
+    });
+    document.querySelectorAll('.checkbox-list input[type="checkbox"]').forEach(function(item){
+        item.checked = false;
+    });
+
+    if (document.getElementById("toggleHeaderWerkstet1").classList.contains('opened')) {
+        document.getElementById("toggleHeaderWerkstet1").click();
+    }
+
+    if (document.getElementById("toggleHeaderKfz1").classList.contains('opened')) {
+        document.getElementById("toggleHeaderKfz1").click();
+    }
 
     if (document.getElementById("searchKfz1").checked && document.getElementById("searchWerkstatt1").checked) {
         document.getElementById("searchKfz1").click();
@@ -144,10 +174,12 @@ var myDrop = new drop({
     preselected: [0]
 });
 
-var myDrop = new drop({
+var myDrop1 = new drop({
     selector:  '#multiselect1',
     preselected: [0]
 });
+
+//myDrop.addOption();
 
 
 /* Menu */
@@ -297,19 +329,33 @@ function WerkstattToggle(event, id) {
 
     if(id == 'WerkstetOption'){
         document.getElementById('clearFilters').classList.add('filters-opened');
+
+        if(!document.getElementById('KfzOption').checked && event.srcElement.checked){
+            y.style.display = "block";
+            z.style.display = "block";
+        }
+        else {
+            y.style.display = "none";
+            z.style.display = "none";
+        }
     }
     else {
         document.getElementById('clearFilters1').classList.add('filters-opened');
+
+        if(!document.getElementById('KfzOption1').checked && event.srcElement.checked){
+            y.style.display = "block";
+            z.style.display = "block";
+        }
+        else {
+            y.style.display = "none";
+            z.style.display = "none";
+        }
     }
 
     if (event.srcElement.checked) {
         x.style.display = "block";
-        y.style.display = "block";
-        z.style.display = "block";
     } else {
         x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "none";
     }  
 }
 
@@ -320,19 +366,33 @@ function KfzToggle(event, id) {
 
     if(id == 'KfzOption'){
         document.getElementById('clearFilters').classList.add('filters-opened');
+        
+        if(!document.getElementById('searchWerkstatt').checked && event.srcElement.checked){
+            y.style.display = "block";
+            z.style.display = "block";
+        }
+        else if (!document.getElementById('searchWerkstatt').checked && !event.srcElement.checked){
+            y.style.display = "none";
+            z.style.display = "none";
+        }
     }
     else {
         document.getElementById('clearFilters1').classList.add('filters-opened');
+
+        if(!document.getElementById('searchWerkstatt1').checked && event.srcElement.checked){
+            y.style.display = "block";
+            z.style.display = "block";
+        }
+        else if (!document.getElementById('searchWerkstatt1').checked && !event.srcElement.checked){
+            y.style.display = "none";
+            z.style.display = "none";
+        }
     }
 
     if (event.srcElement.checked) {
         x.style.display = "block";
-        y.style.display = "block";
-        z.style.display = "block";
     } else {
         x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "none";
     }    
 }
 
